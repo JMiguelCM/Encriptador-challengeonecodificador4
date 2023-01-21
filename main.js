@@ -1,16 +1,21 @@
+// Declaración de variables para seleccionar los elementos del HTML
 var botonEncriptar = document.querySelector('.btn-encriptar');
 var botonDesencriptar = document.querySelector('.btn-desencriptar');
 var munieco = document.querySelector('.contenedor-munieco');
 var h3 = document.querySelector('.contenedor-h3');
 var parrafo = document.querySelector('.contenedor-parrafo');
 var resultado = document.querySelector('.texto-resultado');
-
+// Asignación de eventos click a cada uno de los botones
 botonEncriptar.onclick = encriptar;
 botonDesencriptar.onclick = desencriptar;
 
+// Función encriptar
 function encriptar() {
+    // Oculta elementos del HTML
     ocultarAdelante();
+    // Recupera el texto del área de texto
     var area = recuperarTexto();
+    // Asigna el resultado de la encriptación al elemento HTML resultado
     resultado.textContent = encriptarTexto(area);
     // console.log(resultado);
 }
@@ -31,6 +36,8 @@ function ocultarAdelante() {
     h3.classList.add('ocultar');
     parrafo.classList.add('ocultar');
 }
+// Función para encriptar el texto
+// La letra a = ai e = enter i = imes o = ober u = ufat
 function encriptarTexto(mensaje){
     var texto = mensaje;
     var textoFinal = "";    
@@ -58,7 +65,7 @@ function encriptarTexto(mensaje){
     }
     return textoFinal;
 }
-
+//funcion desencriptar
 function desencriptarTexto(mensaje){
     var texto = mensaje;
     var textoFinal = "";
@@ -91,6 +98,7 @@ function desencriptarTexto(mensaje){
     }
     return textoFinal;
 }
+//boton copiar
 const btnCopiar = document.querySelector(".btn-copiar"); 
     btnCopiar.addEventListener("click", copiar = () => {
     var contenido = document.querySelector(".texto-resultado").textContent;
@@ -98,6 +106,7 @@ const btnCopiar = document.querySelector(".btn-copiar");
     alert("Texto Copiado con exito")
     // console.log("hola");
 })
+//boton limpiar el area donde se pone el texto
 const botonLimpiar = document.querySelector('.btn-limpiar');
 botonLimpiar.addEventListener('click', limpiar = () => {
   const area = document.querySelector('.area');
