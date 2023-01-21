@@ -201,10 +201,18 @@ footer{
 .github{
     width: 50px;
     margin: auto;
+    transition: 0.5s;
 }
+.github:hover{
+    width: 100px;
+} 
 .linkedin{
     width: 50px;
+    transition: 0.5s;
 }
+.linkedin:hover{
+    width: 100px;
+} 
 @media screen and (max-width: 900px) {
     header{
         margin: 10px;
