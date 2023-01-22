@@ -180,6 +180,8 @@ section {
     font-size: 16px;
     display: block;
     text-align: center;
+    position: relative;
+    top: 20px;
 }
 .contenedor-resultado{
     width: 100%;
@@ -192,28 +194,28 @@ section {
 }
 footer{
     width: 100%;
-    height: 50px;
+    height: 30px;
     padding-top: 30px;
     text-align: center;
     position: relative;
-    top: -55px;
+    top: -30px;
 }
 .github{
-    width: 50px;
+    width: 40px;
     margin: auto;
     transition: 0.5s;
 }
 .github:hover{
-    width: 100px;
+    width: 50px;
 } 
 .linkedin{
-    width: 50px;
+    width: 40px;
     transition: 0.5s;
 }
 .linkedin:hover{
-    width: 100px;
+    width: 50px;
 } 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 720px) {
     header{
         margin: 10px;
         padding: 10px;
@@ -309,7 +311,7 @@ footer{
         .btn-copiar {
             width: 100px;
             position: relative;
-            top: -350px;
+            top: -340px;
         }
         footer{
             display: block;
