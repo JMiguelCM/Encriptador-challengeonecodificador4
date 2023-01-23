@@ -235,7 +235,7 @@ footer{
     }
     .seccion2{
         width: 100vw;
-        height: 70vh;
+        height: 75vh;
         margin: 50px auto;
         
     }
@@ -311,7 +311,7 @@ footer{
         .btn-copiar {
             width: 100px;
             position: relative;
-            top: -340px;
+            top: -315px;
         }
         footer{
             display: block;
