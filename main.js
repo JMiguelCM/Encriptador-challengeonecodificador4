@@ -15,16 +15,16 @@ function encriptar() {
     ocultarAdelante();
     // Recupera el texto del área de texto
     var area = recuperarTexto();
-    var expresion = /[^a-zA-Z]/;
-    var resultadoAcento = area.match(expresion);
-        if (isNaN(area) && resultadoAcento == null ) {
         ocultarAdelante();  
         // Asigna el resultado de la encriptación al elemento HTML resultado
         resultado.textContent = encriptarTexto(area);
-        } else {
-            alert("No se permiten acentos ni números")
-            location.reload();
-    }
+        //bloquea acentos
+        var expresion = /^[a-zA-Zch\s0-9]+$/;
+        if (!expresion.test(area)) {
+        alert("No se permiten acentos");
+        location.reload();
+}
+
 }
 function desencriptar(){
     ocultarAdelante();  
@@ -119,4 +119,5 @@ botonLimpiar.addEventListener('click', limpiar = () => {
   const area = document.querySelector('.area');
   const area2 = document.querySelector('.texto-resultado');
   area.value = '';
+  location.reload();
 });
